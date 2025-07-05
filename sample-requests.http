@@ -1,0 +1,50 @@
+### Health Check
+GET http://localhost:8080/health
+
+### Get Metrics
+GET http://localhost:8080/metrics
+
+### Create Book
+POST http://localhost:8080/api/v1/books
+Content-Type: application/json
+
+{
+  "title": "The Go Programming Language",
+  "author": "Alan Donovan",
+  "isbn": "9780134190440",
+  "price": 49.99,
+  "published_at": "2015-11-16T00:00:00Z"
+}
+
+### Create Another Book
+POST http://localhost:8080/api/v1/books
+Content-Type: application/json
+
+{
+  "title": "Clean Code",
+  "author": "Robert C. Martin",
+  "isbn": "9780132350884",
+  "price": 39.99,
+  "published_at": "2008-08-11T00:00:00Z"
+}
+
+### Get All Books
+GET http://localhost:8080/api/v1/books
+
+### Get Book by ID
+GET http://localhost:8080/api/v1/books/1
+
+### Update Book
+PUT http://localhost:8080/api/v1/books/1
+Content-Type: application/json
+
+{
+  "title": "The Go Programming Language - Updated",
+  "price": 59.99
+}
+
+### Delete Book
+DELETE http://localhost:8080/api/v1/books/1
+
+### Test Non-existent Book
+GET http://localhost:8080/api/v1/books/999
